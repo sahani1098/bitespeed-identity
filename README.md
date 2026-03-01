@@ -26,10 +26,6 @@ npm install
 
 ### 2. Configure Environment
 
-```bash
-cp .env.example .env
-```
-
 Open `.env` and paste your MongoDB connection string:
 
 ```env
