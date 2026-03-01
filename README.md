@@ -1,7 +1,7 @@
 # Bitespeed Identity Reconciliation
 
 ## 🌐 Live API URL
-https://bitespeed-identity-b71t.onrender.com/identify
+https://bitespeed-identity-b71t.onrender.com
 
 A REST API that identifies and links customer contacts across multiple purchases using **Node.js + TypeScript + MongoDB**.
 
