@@ -11,6 +11,28 @@ app.get("/", (_req, res) => {
   res.json({ status: "ok", message: "Bitespeed Identity Service is running 🚀" });
 });
 
+// Browser friendly GET for /identify
+app.get("/identify", (_req: Request, res: Response) => {
+  res.status(200).json({
+    service: "Bitespeed Identity Reconciliation API",
+    endpoint: "POST /identify",
+    method: "POST",
+    description: "Send a POST request to this endpoint to identify and link customer contacts.",
+    example_request: {
+      email: "lorraine@hillvalley.edu",
+      phoneNumber: "123456"
+    },
+    example_response: {
+      contact: {
+        primaryContatctId: "<id>",
+        emails: ["lorraine@hillvalley.edu"],
+        phoneNumbers: ["123456"],
+        secondaryContactIds: []
+      }
+    }
+  });
+});
+
 // Identify endpoint
 app.post("/identify", async (req: Request, res: Response, next: NextFunction) => {
   try {
